@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="shoping list.css">
+    <style>
+        #list-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <div id="list-container">
+        <input type="text" id="item" placeholder="Enter item...">
+        <button onclick="addItem()">Add Item</button>
+    </div>
+    <ul id="shopping-list"></ul>
+
+    <script>
+        // Function to add item to the list
+        function addItem() {
+            var itemInput = document.getElementById('item');
+            var item = itemInput.value.trim(); // Trim any leading or trailing whitespace
+            
+            if (item === '') {
+                alert('Please enter an item.');
+                return;
+            }
+
+            var list = document.getElementById('shopping-list');
+            var listItem = document.createElement('li');
+            listItem.textContent = item;
+            list.appendChild(listItem);
+
+            // Clear input field after adding item
+            itemInput.value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+
+  position: absolute;
+  top: -5%;
+  left: 40%;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+button {
+  background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	
+}
